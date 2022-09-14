@@ -16,9 +16,7 @@ ineq=c(rep(">=",35), "=", rep("<=",24))
 
 b=c(rep(0,24), 100, 250, 450, 850, 1450, 2350, 3250, 4100, 4600,
     4900, 5150, 5250, rep(600,12), rep(300,12))
-#ERROR
-#I forgot to add up the total demand at the end of each month, and instead 
-#only listed that specific month's demand as a constraint 
+
 
 lp("min", f, A, ineq, b)$solution
-#NOW RETURNS 250 SURPLUS FOR MONTH 8
+
